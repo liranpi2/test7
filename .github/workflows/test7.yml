@@ -38,7 +38,7 @@ jobs:
           git submodule add https://github.com/MichaelGrafnetter/DSInternals.git DSInternals
           git submodule add https://github.com/sqlmapproject/sqlmap.git sqlmap
           git submodule add https://github.com/SnaffCon/Snaffler.git 
-          git pull --recurse-submodules
+          git pull && git submodule foreach git pull origin master
           git add .
           git commit -am "add submodule" && git push || echo "No changes to commit"
         continue-on-error: true
