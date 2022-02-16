@@ -47,7 +47,7 @@ jobs:
             git submodule add https://github.com/SnaffCon/Snaffler.git
             echo "Installing config files in ${DIR}..."
           fi
-         continue-on-error: true 
+        continue-on-error: true 
          
       - uses: actions/checkout@v2
       - run: | 
